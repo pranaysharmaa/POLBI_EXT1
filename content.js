@@ -1,4 +1,4 @@
-const API_URL = "https://biascheck-api.onrender.com/predict_bias";
+const API_URL = "https://cors-anywhere.herokuapp.com/https://biascheck-api.onrender.com/predict_bias";
 
 async function checkAndHighlight(text, element) {
   try {

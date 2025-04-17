@@ -1,21 +1,21 @@
 {
   "manifest_version": 3,
-  "name": "BiasCheck",
+  "name": "BiasCheck Highlighter",
   "version": "1.0",
-  "description": "Highlights political bias in visible text on any webpage.",
-  "permissions": ["scripting"],
-  "host_permissions": [
-    "https://biascheck-api.onrender.com/*",
-    "<all_urls>"
+  "description": "Highlights political bias in website content using a remote API.",
+  "permissions": [
+    "scripting",
+    "activeTab"
   ],
-  "action": {
-    "default_title": "BiasCheck"
-  },
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*",
+    "https://cors-anywhere.herokuapp.com/*"
+  ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
+      "js": ["content.js"]
     }
   ]
 }

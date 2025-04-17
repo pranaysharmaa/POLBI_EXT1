@@ -1,9 +1,8 @@
 const API_URL = "https://biascheck-api.onrender.com/predict_bias";
-const PROXIED_URL = `https://cors-anywhere.herokuapp.com/${API_URL}`;
 
 async function checkAndHighlight(text, element) {
   try {
-    const response = await fetch(PROXIED_URL, {
+    const response = await fetch(API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
